@@ -1,0 +1,273 @@
+/* root */
+
+:root {
+    /* Color */
+    --primary-color: #FF6565;
+    --white-color: #FFFF;
+
+    /* Font */ 
+    --font-family: 'Source Sans Pro', sans-serif;
+
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+/* Base */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    /*max-width: 87.5rem;*/
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.header-container {
+    max-width: 62.5rem;
+    max-height: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.header {
+    background-image: url(./images/headphones_hero_1.jpg) ;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo section */
+.header-logo img {
+    width: 10rem;
+    height: 2rem;
+}
+
+/* Nav Bar section */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+.navbar-menu .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    max-height: 1rem;
+}
+.navbar-menu .nav .nav-item a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--white-color);
+    line-height: 1rem;
+}
+.navbar-menu .nav .nav-item a:hover {
+    color: var(--primary-color);
+}
+.navbar-menu .nav .nav-item {
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.section-hero {
+    width: 60%;
+    max-height: 100%;
+    max-width: 58%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: -18rem;
+}
+.section-hero .header-hero h2,.section-hero .header-hero h4 {
+    font-family: var(--font-family);
+    font-style: normal;
+    color: var(--white-color);
+    width: 100%;
+    padding: 0.5rem;
+}
+.section-hero .header-hero h2 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-x-large);
+    line-height: 2.5rem;
+}
+.section-hero .header-hero h4 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    line-height: 1.5rem;
+}
+.section-hero .body-hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
+    font-family: var(--font-family);
+}
+.section-hero .body-hero .main-btn {
+    max-width: 10rem;
+    max-height: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+    font-size: 0.9rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 25%;
+    cursor: pointer;
+    line-height: 1.1rem;
+}
+.section-hero .body-hero .main-btn:hover {
+    opacity: 0.9;
+}
+.section-hero .body-hero p {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 1rem;
+    color: var(--white-color);
+    max-width: 80ch;
+    text-align: center;
+    line-height: 1.8rem;
+}
+/* Hamburger Style */
+.menu-icon {
+    cursor: pointer;
+    padding: 2.5rem;
+    position: absolute;
+    left: 0.5%;
+    top: 1%;
+    user-select: none;
+    display: none;
+}
+.menu-icon .navicon {
+    background-color: var(--white-color);
+    display: block;
+    width: 1.6rem;
+    height: .2rem;
+    position: relative;
+    transition:  background .2s ease-out;
+    
+}
+.menu-icon .navicon::after, .header .menu-icon .navicon::before {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 100%;
+    position: absolute;
+    background: var(--white-color);
+    transition: all .2s ease-out;
+}
+.menu-icon .navicon::before {
+    top: .7rem;
+}
+.menu-icon .navicon::after {
+    top: -.7rem;
+}
+#menu-btn {
+    display: none;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before,
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    top: 0;
+}
+@media screen and (max-width: 550px) {
+    .header {
+        flex-direction: column;
+    }
+    .header-container {
+        display: flex;
+        height: 56rem;
+        flex-wrap: column wrap;
+        padding: 0 1.5rem;
+    }
+    .section-hero {
+        bottom: -10rem;
+    }
+    .header .menu-icon {
+        display: block !important;
+    }
+    .header-container .navbar-menu ul {
+        flex-direction: column;
+        max-height: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .header-container .navbar-menu ul li {
+        padding: 18px 0;
+    }
+    .header-container .navbar-menu {
+        display: none;   
+    }
+    #menu-btn:checked ~ nav {
+        display: flex;  
+    }
+    .header-container .header-logo {
+        position: relative;
+        left: 30%;
+        top: 20%;
+    }
+    .header .header-container .navbar-menu {
+        position: relative;
+        left: -34%;
+        top: 300%;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+    .section-hero {
+        bottom: -15rem;
+    }
+}
