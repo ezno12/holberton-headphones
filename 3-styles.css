@@ -1,0 +1,459 @@
+/* root */
+
+:root {
+    /* Color */
+    --primary-color: #FF6565;
+    --white-color: #FFFF;
+    --black-color: #071629;
+
+    /* Font */ 
+    --font-family: 'Source Sans Pro', sans-serif;
+
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-weight-meduim: 600;
+}
+
+/* Base */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    /*max-width: 87.5rem;*/
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.header-container {
+    max-width: 62.5rem;
+    max-height: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.header {
+    background-image: url(./images/headphones_hero_1.jpg) ;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo section */
+.header-logo img {
+    width: 10rem;
+    height: 2rem;
+}
+
+/* Nav Bar section */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+.navbar-menu .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    max-height: 1rem;
+}
+.navbar-menu .nav .nav-item a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+    color: var(--white-color);
+    line-height: 1rem;
+}
+.navbar-menu .nav .nav-item a:hover {
+    color: var(--primary-color);
+}
+.navbar-menu .nav .nav-item {
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.section-hero {
+    width: 90%;
+    max-height: 100%;
+    max-width: 58%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: -18rem;
+}
+.section-hero .header-hero h2,.section-hero .header-hero h4 {
+    font-family: var(--font-family);
+    font-style: normal;
+    color: var(--white-color);
+    width: 100%;
+    padding: 0.5rem;
+}
+.section-hero .header-hero h2 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-x-large);
+    line-height: 2.5rem;
+}
+.section-hero .header-hero h4 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-small);
+    line-height: 1.5rem;
+}
+.section-hero .body-hero {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    text-align: center;
+    font-family: var(--font-family);
+}
+.button-primary {
+    max-width: 10rem;
+    max-height: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+    font-size: 0.9rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 25%;
+    cursor: pointer;
+    line-height: 1.1rem;
+}
+.section-hero .body-hero .button-primary:hover {
+    opacity: 0.9;
+}
+.section-hero .body-hero p {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-regular);
+    font-size: 1rem;
+    color: var(--white-color);
+    max-width: 80ch;
+    text-align: center;
+    line-height: 1.8rem;
+}
+/* Hamburger Style */
+.menu-icon {
+    cursor: pointer;
+    padding: 2.5rem;
+    position: absolute;
+    left: 0.5%;
+    top: 1%;
+    user-select: none;
+    display: none;
+}
+.menu-icon .navicon {
+    background-color: var(--white-color);
+    display: block;
+    width: 1.6rem;
+    height: .2rem;
+    position: relative;
+    transition:  background .2s ease-out;
+    
+}
+.menu-icon .navicon::after, .header .menu-icon .navicon::before {
+    content: "";
+    display: block;
+    width: 130%;
+    height: 100%;
+    position: absolute;
+    background: var(--white-color);
+    transition: all .2s ease-out;
+}
+.menu-icon .navicon::before {
+    top: .7rem;
+}
+.menu-icon .navicon::after {
+    top: -.7rem;
+}
+#menu-btn {
+    display: none;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+}
+
+#menu-btn:checked ~ .menu-icon .nav-icon::before,
+#menu-btn:checked ~ .menu-icon .nav-icon::after {
+    top: 0;
+}
+@media screen and (max-width: 550px) {
+    .header {
+        flex-direction: column;
+    }
+    .header-container {
+        display: flex;
+        height: 56rem;
+        flex-wrap: column wrap;
+        padding: 0 1.5rem;
+    }
+    .section-hero {
+        bottom: -10rem;
+    }
+    .header .menu-icon {
+        display: block !important;
+    }
+    .header-container .navbar-menu ul {
+        flex-direction: column;
+        max-height: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .header-container .navbar-menu ul li {
+        padding: 18px 0;
+    }
+    .header-container .navbar-menu {
+        display: none;   
+    }
+    #menu-btn:checked ~ nav {
+        display: flex;  
+    }
+    .header-container .header-logo {
+        position: relative;
+        left: 30%;
+        top: 20%;
+    }
+    .header .header-container .navbar-menu {
+        position: relative;
+        left: -34%;
+        top: 300%;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+    .section-hero {
+        bottom: -15rem;
+    }
+}
+/* Services Section */
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+    
+    margin-inline: auto;
+    padding: 4rem 0;
+}
+.section-header {
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.section-header h2 {
+    max-width: 120ch;
+    text-align: center;
+    padding: 2rem 0;
+}
+.section-header p {
+    max-width: 120ch;
+    text-align: center;
+    padding: 0 2rem;
+}
+.services {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    text-align: center;
+    padding: 2rem 0 ;
+    
+}
+.services-menu img {
+    padding: 1rem 0;
+}
+.services-menu h4 {
+    margin: 1rem;
+}
+.services p {
+    max-width: 30ch;
+    
+}
+.section p, .section h4, section h2 {
+    font-family: var(--font-family);
+}
+.section-header h2 {
+    font-weight: var(--font-weight-bold);
+}
+/* Result Section */
+.resualt-section {
+    background-image: url(./images/headphones_hero_2.jpg);
+    width: 100%;
+    margin-inline: auto;
+}
+.section-header-resualt {
+    display: flex;
+    flex-flow: column wrap;
+    margin: auto;
+    padding: 0 4rem;
+}
+.resualt {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 2rem 0;
+}
+.pentagon {
+    height: 0;
+    width: 6rem;
+    margin: 3rem;
+    border-top: 6rem solid var(--primary-color);
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.pentagon::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    border-bottom: 6rem solid var(--primary-color);
+    border-left: 6rem solid transparent;
+    border-right: 6rem solid transparent;
+    bottom: 6rem;
+    left: -3rem;
+}
+
+.section-header-resualt h2, .section-header-resualt p, .resualt .pentagon h1, .resualt .pentagon p {
+    
+    color: var(--white-color);
+    font-family: var(--font-family);
+    text-align: center;
+    max-width: 120ch;
+}
+.section-header-resualt p {
+    margin: 2rem 0 6rem 0;
+}
+.resualt-section .section-header-resualt {
+    width: 100%;
+    align-content: center;
+}
+.resualt .pentagon h1, .resualt .pentagon p {
+    position: relative;
+    z-index: 3;
+    top: -5rem;
+}
+.resualt .pentagon h1 {
+    font-size: var(--font-size-xx-large);
+}
+/* Contact Us Section */
+.post-message {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    margin-inline: auto;
+    height: 50rem;
+}
+.post-message h1 {
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: var(--font-size-x-large);
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+.contact-btn {
+    max-width: 10rem;
+    max-height: 4rem;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-style: normal;
+    font-size: 0.9rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 18%;
+    cursor: pointer;
+    line-height: 1.1rem;
+}
+.post-message fieldset {
+    width: 100%;
+    border: none;
+}
+.form-group .form-field input, .form-group .form-field textarea {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    border-bottom: 2px solid rgba(7, 22, 41, 0.3);
+    color: var(--black-color);
+    font-family: var(--font-family);
+    font-style: normal;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-meduim);
+    padding: 0.8rem;
+    width: 80%;
+    margin: auto;
+    line-height: 1rem;
+}
+.form-field input::placeholder {
+    transform: translateY(0.6rem);
+}
+.form-field textarea::placeholder {
+    transform: translateY(5rem);
+  }
