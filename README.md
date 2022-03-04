@@ -12,3 +12,34 @@ In this project i did a developer the website with base in a graphic design real
 - Import the fonts
 
 The web page should be responsive and same the most possible the graphic design.
+<br><br>
+Here the final result:</p>
+
+<h3>Headphones Desktop</h3>
+<img src="https://github.com/tennin12/holberton-headphones/blob/main/images/01_headphones_desktop%402x.png?raw=true" alt="Headphones Desktop" width="550"><br>
+
+<h3>Headphones Tablet</h3>
+<img src="https://github.com/tennin12/holberton-headphones/blob/main/images/01_headphones_tablet%402x.png?raw=true" alt="Headphones Tablet" width="450"><br>
+
+<h3>Headphones Mobile</h3>
+<img src="https://github.com/tennin12/holberton-headphones/blob/main/images/01_headphones_mobile%402x.png?raw=true" alt="Headphones Mobile" width="350"><br>
+
+<p>This webpage has been designed by <strong><i>Nicolas Philippot,</i></strong> UI/UX designer.</p>
+
+<h3>Requirements</h3>
+<ul>
+    <li>you are not allowed to import external CSS framework (like Bootstrap)</li>
+    <li>you are not to use Javascript</li>
+</ul>
+
+<br><br>
+
+<h3>This project was carried out by:</h3>
+
+---
+
+## Author
+* **Bassem Yahia** - [Github profile](https://github.com/tennin12) - [Linkedin profile](https://tn.linkedin.com/in/bassem-ben-yahia)
+
+## License
+Public Domain, no copyright protection
