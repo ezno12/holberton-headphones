@@ -6,6 +6,7 @@
 
 In this project i did a developer the website with base in a graphic design realized in Figma, the goals the this project was developer the web page used:
 
+- [Figma file link](https://www.figma.com/file/gkWRcFqkwtruWZgSfnnHF0/Holberton-School---Headphone-company)
 - HTML
 - Pure CSS (any frameworks)
 - Not Javascript
